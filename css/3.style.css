@@ -6,18 +6,20 @@ body{
     background-image: url(../İmg/pexels-stijn-dijkstra-3265460.jpg);
     background-repeat: no-repeat;
     background-position: center center;
-    /* background-size: cover; */
-    min-height: 1200px;
-    min-width: 1300px;
+    background-size: cover;
+    width: clamp(300px, 80%, 1300px);
+    /* min-height: 1200px;
+    min-width: 1300px; */
     display: flex;
     flex-direction: column;
     align-items: center;
 } 
-/*  den bunu width: clamp(300px, 80%, 1200px) */
-
+#liste{
+    margin-top: 100px;
+    list-style-type: none;
+}
 #yeni{
     color:black ;
-
 }
 .sinif{
     color: yellow !important;
@@ -30,10 +32,7 @@ ve important ile durumu değiştirebilirsin. */
 
 #p_1{
     color:red;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* sırasıyla renkler tanımlı değilse bir sonrakini alır */
-    font-size: 23px;
-    font-style: italic;
+    font: italic 23px Verdana, Geneva, Tahoma, sans-serif;
     text-transform: capitalize;
     /* uppercase lowercase capitalize */
     text-decoration: line-through;
@@ -42,7 +41,7 @@ ve important ile durumu değiştirebilirsin. */
 #p_2{
     text-indent: 60px;
     text-align: center;
-    line-height: 28px;
+    line-height: 58px;
     letter-spacing: 25px;
     word-spacing: 25px;
     text-shadow: 4px 4px 5px #990033;
@@ -72,7 +71,7 @@ ve important ile durumu değiştirebilirsin. */
 }
 input[type="submit"]{
     color:blue;
-    background-color:chartreuse;
+    background-color:yellow;
 }
 
 #kutucuk2{
@@ -96,10 +95,9 @@ input[type="submit"]{
 }  
 .menu {
     position: fixed;
-    top:-90px;
     width: 550px;
     height: 50px;
-    margin: 100px auto;
+    margin: 10px auto;
     border-bottom: 4px solid red;
     background-image: url(../İmg/bulut-turleri.jpg) ;
 }
@@ -120,16 +118,21 @@ input[type="submit"]{
     width: unset;
     /* unset bu elemente önceden tanımlanan width 
     kuralını yok sayıyor hiç ayar yapmamışsın gibi. */
+    list-style-type: none;
     background-color: rgba(255, 255, 255, 0.4);
     border: 2px solid #ddd;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; 
+    /* görünümü displayı değiştirerek yapamıyorsun visibility daha uygun */
 }
 .menu li:last-child{
     margin-right: 0px;
 }
 .menu:hover li {
-    display: inline;
-    /* ister inline ister display inline de bu durum için
+    opacity: 1;
+    visibility: visible;
+    /* ister inline ister inline blok de bu durum için
     çünkü boyutlarını dış divden ayarladık */
 }
 
@@ -173,7 +176,7 @@ nth-of-type, saymaya türlerden başlar  */
 /*position: absolute; top,bottom,left,right
 hepsine ve margine sıfır ver ortala, hangi tarafa sıfır 
 verirsen oraya gidiyor. */
-/* ::root {--abcd: pink; } diye değiken atarsın sonrasında
+/* ::root {--abcd: pink; } diye değişken atarsın sonrasında
 herhangi bir yerde color: var(abcd);  şeklinde kullan*/
 /*background: linear-gradient(90deg,yellow ,black ,red 20%); 
 burada redi tüm divin en baştaki 20%den başlatıyor.
