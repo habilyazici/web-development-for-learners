@@ -1,0 +1,39 @@
+/* vw viewport width, wh viewport height için kullanılıyor ve
+bu değerler parentten bağımsız bir şekilde direkt 
+tarayıcının boyutuna göre ayarlamak için kullanılır.
+% ise parentin boyutuna göre ayarlamak için kullanılır. */
+/* vertical-align: middle öğeyi satırda
+hizalamak için kullanılıyor. */
+
+/*   filter: blur(2px); */
+/* object-fit: cover; bir <img> veya <video> gibi medya öğesinin,
+kapsayıcısının (parent div’in) tamamını kaplayacak 
+şekilde kırpılarak yerleşmesini sağlar */
+
+/* gap:16px bildiğimiz margin ama parent dive veriyosun bu
+özelliği ve çocuklara uyguluyor bunu */
+/* div:not(#example) {color: red;}
+id değeri example olmayan tüm div öğelerini seçer. */
+/* img {
+    width: max(250px, 25vw); } hangi değer daha büyükse
+    genişlik ona göre ayarlanıyor max fonksiyonunda*/
+/* aspect-ratio: 16 / 9; */
+/* scroll-behavior:smooth;
+*/
+/* :nth-child() baştan başlar saymaya diğeri ise 
+nth-of-type, saymaya türlerden başlar  */
+/*position: absolute; top,bottom,left,right
+hepsine ve margine sıfır ver ortala, hangi tarafa sıfır 
+verirsen oraya gidiyor. */
+/* ::root {--abcd: pink; } diye değişken atarsın sonrasında
+herhangi bir yerde color: var(abcd);  şeklinde kullan*/
+/*background: linear-gradient(90deg,yellow ,black ,red 20%); 
+burada redi tüm divin en baştaki 20%den başlatıyor.
+dolayısıyla divin 80%i rede */
+/* ::selection Kullanıcı bir metni seçtiğinde (mouse ile taradığında) 
+o seçili alanı stillendirmek için kullanılır.
+Örnek, ::checked Bir checkbox, radio button veya option
+seçildiğinde (işaretlendiğinde) o öğeyi seçmek için kullanılır*/
+/* align self CSS Flexbox veya Grid düzenlerinde bir çocuğun 
+(örneğin bir div’in) kendi hizalamasını, diğer kardeşlerinden
+ bağımsız olarak ayarlamak için kullanılır*/

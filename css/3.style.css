@@ -7,12 +7,11 @@ body{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    width: clamp(300px, 80%, 1300px);
-    /* min-height: 1200px;
-    min-width: 1300px; */
+    width: clamp(300px, 96%, 2100px);
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0px auto;
 } 
 #liste{
     margin-top: 100px;
@@ -101,13 +100,11 @@ input[type="submit"]{
     border-bottom: 4px solid red;
     background-image: url(../İmg/bulut-turleri.jpg) ;
 }
-.menu, .menu ul{
+.menu ul{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content:center;
-}
-.menu ul {
     margin: 0px;
     padding: 0px;
     width: auto;
@@ -123,8 +120,6 @@ input[type="submit"]{
     border: 2px solid #ddd;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; 
-    /* görünümü displayı değiştirerek yapamıyorsun visibility daha uygun */
 }
 .menu li:last-child{
     margin-right: 0px;
@@ -132,6 +127,8 @@ input[type="submit"]{
 .menu:hover li {
     opacity: 1;
     visibility: visible;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out; 
+    /* görünümü displayı değiştirerek yapamıyorsun visibility daha uygun */
     /* ister inline ister inline blok de bu durum için
     çünkü boyutlarını dış divden ayarladık */
 }
@@ -148,41 +145,8 @@ input[type="submit"]{
     background: red;
     color: white;
     font-size: 17px;
-    transition: 0.2s;
+    transition: 0.8s;
 }
-/* vw viewport width, wh height için kullanılıyor ve
-bu değerler parentten bağımsız bir şekilde direkt 
-tarayıcının boyutuna göre ayarlamak için kullanılır.
-% ise parentin boyutuna göre ayarlamak için kullanılır. */
-/* vertical-align: middle öğeyi satırda 
-hizalamak için kullanılıyor. */
 
-/*   filter: blur(2px); */
-/* object-width: cover fotoğrafı yerleştirirken kullanılıyor
-eğer fotoğraf html dosyasında yüklenmişse tabii ki */
-
-/* gap:16px bildiğimiz margin ama parent dive veriyosun bu
-özelliği ve çocuklara uyguluyor bunu */
-/* div:not(#example) {color: red;}
-id değeri example olmayan tüm div öğelerini seçer. */
-/* img {
-  width: max(250px, 25vw); } hangi değer daha büyükse
-  genişlik ona göre ayarlanıyor max fonksiyonunda*/
-/* aspect-ratio: 16 / 9; */
-/* scroll-behavior:smooth;
-*/
-/* :nth-child() baştan başlar saymaya diğeri ise 
-nth-of-type, saymaya türlerden başlar  */
-/*position: absolute; top,bottom,left,right
-hepsine ve margine sıfır ver ortala, hangi tarafa sıfır 
-verirsen oraya gidiyor. */
-/* ::root {--abcd: pink; } diye değişken atarsın sonrasında
-herhangi bir yerde color: var(abcd);  şeklinde kullan*/
-/*background: linear-gradient(90deg,yellow ,black ,red 20%); 
-burada redi tüm divin en baştaki 20%den başlatıyor.
-dolayısıyla divin 80%i rede */
-/* ::selection  ::checked*/
-
-/* align self */
 
 

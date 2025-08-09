@@ -1,6 +1,7 @@
 /* Sözde sınıflar */
 /* a:link ziyaret edilemmiş linklerin a:visited ise ziyaret edilmişlerin hangi özellik
 barındırdığını söylemektedir.*/
+
 a:link{
     text-decoration:none;
     color:green;
