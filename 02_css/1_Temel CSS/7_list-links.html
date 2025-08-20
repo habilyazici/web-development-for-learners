@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>   
+    <title>Document</title>
     <style>
-      
         * {
             box-sizing: border-box;
-        }
-
-        body {
             margin: 0;
-        }
-
-        #showcase { 
-            background-color: #2E4C6D; 
-            height: 500px;
-            width: 100%;
-            padding: 10px;
-        }
-       
-        #how-it-works { 
-            background-color: #FC997C;
-            padding: 10px;
         }
 
         .main-header {
             background-color: #FC997C;
-            padding: 8px 16px;
+            height: 60px;
         }
 
         .main-nav {
             display: inline-block;
-            width: calc(100% - 99px);
-            text-align: right;
+            width: calc(100% - 100px);
         }
+
         .main-nav__items {
             margin: 0;
             padding: 0;
             list-style: none;
+            /* İnline block ile list stili uygulanmaz */
+            text-align: right;
+            /* justify start end de kullanılabilir */
         }
 
         .main-nav__item {
             display: inline-block;
             margin: 0 10px;
+        }
+
+        .main-nav__item a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        #showcase {
+            background-color: #2E4C6D;
+            height: 200px;
+            width: 100%;
+            padding: 10px;
+        }
+
+        #how-it-works {
+            background-color: #FC997C;
+            padding: 10px;
         }
 
         .main-header__logo {
@@ -54,18 +59,12 @@
             font-weight: bold;
             font-size: 21px;
         }
-
-        .main-nav__item a {
-            text-decoration: none;
-            color: #fff;
-        }
-       
     </style>
 </head>
-<body>
 
+<body>
     <header class="main-header">
-        <a href="#" class="main-header__logo">MovieApp</a>
+        <a href="7_list.html" class="main-header__logo" download>MovieApp</a>
         <nav class="main-nav">
             <ul class="main-nav__items">
                 <li class="main-nav__item">
@@ -79,16 +78,15 @@
                 </li>
             </ul>
         </nav>
-    </header>    
-
-   <main>
-       <section id="showcase">
-           <h1>Welcome to MovieApp</h1>
-       </section>
-       <section id="how-it-works">
-           <h2>How it works?</h2>
-       </section>
-   </main>
-
+    </header>
+    <main>
+        <section id="showcase">
+            <h1>Welcome to MovieApp</h1>
+        </section>
+        <section id="how-it-works">
+            <h2>How it works?</h2>
+        </section>
+    </main>
 </body>
+
 </html>

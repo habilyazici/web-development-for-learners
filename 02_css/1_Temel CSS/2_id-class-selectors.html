@@ -1,26 +1,65 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
-        <!-- health color palette -->
+    <!-- health color palette -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        section { background-color: #2E4C6D; }
+        section {
+            background-color: #2E4C6D;
+        }
 
-        .f20 { font-size: 20px; }
-        .f18 { font-size: 18px; }
+        #page-title,
+        #page-subtitle {
+            border: 2px solid red;
+        }
 
-        #page-title { border: 2px solid red; }
+        /* sectionun hemen içerisindeki h1'i seçer alt elemanları seçmez */
+        section>h1 {
+            letter-spacing: 2px;
+        }
 
-        #page-subtitle { border: 2px solid blue; }
+        /* h2 içerisinde sınıfı text-white olanları seçer */
+        h2.text-white {
+            text-transform: uppercase;
+        }
 
-        .text-white { color: #fff; }
+        /* divden hemen sonra gelen section'ı seçer */
+        div+section {
+            margin-top: 20px;
+        }
+
+        /* divden hemen sonra gelen sectionları seçer */
+        div~section {
+            border-top: 1px dashed #fff;
+        }
+
+        /* id veya başka bir attribute'si page ile başlayan tüm elemanları seçer */
+        [id^="page"] {
+            padding: 8px;
+        }
+
+        a[href^="https"] {
+            color: #00f;
+        }
+
+        /* id veya başka bir attribute'si subtitle ile biten tüm elemanları seçer */
+        [id$="subtitle"] {
+            color: #FFD700;
+        }
+
+        /* id veya başka bir attribute'sinin içinde title olan tüm elemanları seçer */
+        [id*="title"] {
+            background: #444;
+        }
     </style>
 </head>
+
 <body>
-    
+
     <main>
         <section>
             <h1 id="page-title" class="text-white f20">Welcome To MovieApp</h1>
@@ -31,4 +70,5 @@
     </main>
 
 </body>
+
 </html>
