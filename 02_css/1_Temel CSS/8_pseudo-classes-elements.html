@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes & Elements Örnekleri</title>
+    <style>
+        /* 1. Pseudo Classes */
+        a {
+            border: 1px solid gray;
+            /* padding: 5px 8px; */
+            padding: 5px 0px;
+            display: inline-block;
+            text-decoration: none;
+            width: 100px;
+            text-align: center;
+            margin-right: 8px;
+        }
+
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: green;
+        }
+
+        a:hover {
+            color: #fff;
+            background-color: yellow;
+        }
+
+        a:active {
+            color: #fff;
+            background-color: violet;
+        }
+
+        input:focus {
+            border: 2px solid orange;
+            outline: none;
+        }
+
+        input:checked+label {
+            color: blue;
+            font-weight: bold;
+        }
+
+        ul li:first-child {
+            color: tomato;
+        }
+
+        ul li:nth-child(3) {
+            background: #f9c;
+        }
+
+        ul li:not(.special) {
+            font-size: 12px;
+        }
+
+        /* 2. Pseudo Elements */
+        p.about::first-line {
+            font-weight: bold;
+            color: green;
+            word-spacing: 3px;
+            letter-spacing: 1px;
+            font-size: 13px;
+        }
+
+        p.about::first-letter {
+            color: red;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        ::selection {
+            background-color: hotpink;
+        }
+
+        p::after {
+            content: '★ ';
+            font-size: 35px;
+            padding: 10px;
+            color: tomato;
+        }
+
+        input::placeholder {
+            color: #888;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Pseudo Classes</h2>
+    <a href="borders1.html">Home</a>
+    <a href="box-model1.html">Products</a>
+    <a href="combinators1.html">About</a>
+    <br><br>
+    <input type="text" placeholder="Adınızı girin">
+    <br><br>
+    <input type="checkbox" id="cb1" checked>
+    <label for="cb1">Onaylıyorum</label>
+    <input type="checkbox" id="cb2">
+    <label for="cb2">Onaylamıyorum</label>
+    <br><br>
+    <ul>
+        <li>Birinci</li>
+        <li>İkinci</li>
+        <li class="special">Üçüncü (special)</li>
+        <li>Dördüncü</li>
+    </ul>
+    <br>
+
+    <h2>Pseudo Elements</h2>
+    <p class="about">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda in nihil animi, voluptate possimus amet
+        nostrum similique! Itaque, ipsa. Dicta hic quasi inventore distinctio odio rem nihil atque impedit tenetur.
+    </p>
+    <p class="about">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, pariatur asperiores sunt odit error reiciendis
+        corrupti deserunt explicabo exercitationem consectetur. Deserunt quasi harum magnam nihil consectetur
+        dignissimos tempora sapiente maiores!
+    </p>
+</body>
+
+</html>
