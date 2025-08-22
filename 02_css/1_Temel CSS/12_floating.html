@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating ve Görsel Düzeni</title>
+    <style>
+        #container {
+            background-color: chocolate;
+            padding: 10px;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            margin-left: 10px;
+            background-color: brown;
+            float: right;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+        }
+
+        #box1 {
+            float: left;
+            margin-left: 0;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .example2 img {
+            float: left;
+            width: 200px;
+            margin-right: 10px;
+        }
+        .example2 p {
+            border: 5px solid #ccc;
+            box-shadow: -20px -20px 5px red;
+        }
+          
+    </style>
+</head>
+
+<body>
+    <h1>Floating Kutular ve Görsel Düzeni</h1>
+    <div id="container" class="clearfix">
+        <div class="box" id="box1">Kutu 1</div>
+        <div class="box">Kutu 2</div>
+        <div class="box">Kutu 3</div>
+    </div>
+    <hr>
+
+    <div class="example2 clearfix">
+        <h2>Float ile Görsel ve Metin Düzeni</h2>
+        <img src="/02_css/1_Temel CSS/images/rowing.jpeg" class="float-img" alt="örnek görsel">
+        <p>
+            Bu görsel sola float edildiği için metin görselin sağında akıyor. Float genellikle görsellerin yanına metin
+            yerleştirmek için kullanılır.
+        </p>
+    </div>
+    <hr>
+</body>
+
+</html>
