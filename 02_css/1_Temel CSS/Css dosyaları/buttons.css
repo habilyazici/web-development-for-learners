@@ -16,10 +16,20 @@
     border: 2px solid #FC997C;
 }
 
+.btn-secondary {
+    background: #2E4C6D;
+    color: #fff;
+    border: 2px solid #2E4C6D;
+}
+
 .btn-primary:hover {
     background: #fff;
     color: #FC997C;
-    border: 2px solid #FC997C;
+}
+
+.btn-secondary:hover {
+    background: #fff;
+    color: #2E4C6D;
 }
 
 .btn-outline-primary {
@@ -28,28 +38,16 @@
     border: 2px solid #FC997C;
 }
 
-.btn-outline-primary:hover {
-    background: #FC997C;
-    color: #fff;
-    border: 2px solid #FC997C;
-}
-
-.btn-secondary {
-    background: #2E4C6D;
-    color: #fff;
-    border: 2px solid #2E4C6D;
-}
-
-.btn-secondary:hover {
-    background: #fff;
-    color: #2E4C6D;
-    border: 2px solid #2E4C6D;
-}
-
 .btn-outline-secondary {
     background: #fff;
     color: #2E4C6D;
     border: 2px solid #2E4C6D;
+}
+
+.btn-outline-primary:hover {
+    background: #FC997C;
+    color: #fff;
+    border: 2px solid #FC997C;
 }
 
 .btn-outline-secondary:hover {

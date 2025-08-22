@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute ve Relative Pozisyonlar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 2000px;
+        }
+
+        .box {
+            padding: 10px;
+            border: 5px solid #6d5b95;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .navbar {
+            background: #feb236;
+            position: fixed;
+            width: 100%;
+            z-index: 2;
+            top: 0;
+        }
+
+        .content {
+            background: #d64161;
+            margin-top: 60px;
+            z-index: 1;
+        }
+
+        .absolute-box {
+            /* relative içerik akışta kalır absoluteta ise içerik akıştan çıkar. */
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50% -50%);
+            width: 120px;
+            height: 50px;
+            background: #fff;
+            color: #d64161;
+            text-align: center;
+            line-height: 50px;
+            z-index: 1;
+            border: 5px solid black;
+            /* parent elementlerinin birinde position belirlenmeli yoksa body'ye göre hizalanır. */
+        }
+
+        .footer {
+            background: #ff7b25;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            background: cyan;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" style="position: relative;">
+        <div class="box navbar">Navbar</div>
+        <div class="box content">
+            Content
+            <div class="absolute-box">Absolute Box</div>
+        </div>
+        <div class="box sticky">Sticky Box</div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic amet sit quod itaque voluptatem fugiat
+            quibusdam facere non, repellendus culpa aut corrupti iste, consequatur inventore voluptate numquam ad est
+            nisi!
+            Dolorem nobis quaerat esse iste officia accusantium totam, voluptates velit illum! Iure aliquid rem illo
+            expedita modi libero cum ea recusandae est sed. Eligendi sed atque nostrum itaque nemo repudiandae?
+            Molestiae consequatur voluptates quasi dolorem deserunt maxime, eos eveniet, ipsa tempora inventore quae
+            libero vel sunt magnam! Eum, perspiciatis dolorum voluptate voluptates nesciunt, cum atque quod dolore
+            recusandae, nostrum deserunt.
+            Nemo sunt id dolor, ullam magnam molestiae quo obcaecati molestias expedita nesciunt architecto dicta a!
+            Sequi quisquam aperiam tempore eaque quaerat? Voluptates commodi illo impedit eos facere inventore harum
+            exercitationem.
+            Consectetur doloremque nobis quidem. Asperiores animi rem, eius numquam necessitatibus magni sit ullam
+            magnam, corrupti iusto ducimus quod quisquam placeat cupiditate autem. Placeat, a! Accusamus eligendi maxime
+            porro consequuntur eum.
+            Eos inventore, blanditiis soluta in sed rerum delectus consequatur molestias cupiditate at deserunt
+            similique et vero magni omnis saepe ducimus, maiores voluptatibus. Nemo suscipit eius laudantium accusamus
+            tempora et tenetur.
+            Iusto, reiciendis. Molestias, assumenda. A dolor dolorum, fuga iste rem repellendus hic odio non sit vitae,
+            cumque voluptates dolorem nobis quia aliquam quisquam enim ea debitis at minima possimus voluptatibus?</p>
+        <div class="box sticky">Sticky Box</div>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic amet sit quod itaque voluptatem fugiat
+            quibusdam facere non, repellendus culpa aut corrupti iste, consequatur inventore voluptate numquam ad est
+            nisi!
+            Dolorem nobis quaerat esse iste officia accusantium totam, voluptates velit illum! Iure aliquid rem illo
+            expedita modi libero cum ea recusandae est sed. Eligendi sed atque nostrum itaque nemo repudiandae?
+            Molestiae consequatur voluptates quasi dolorem deserunt maxime, eos eveniet, ipsa tempora inventore quae
+            libero vel sunt magnam! Eum, perspiciatis dolorum voluptate voluptates nesciunt, cum atque quod dolore
+            recusandae, nostrum deserunt.
+            Nemo sunt id dolor, ullam magnam molestiae quo obcaecati molestias expedita nesciunt architecto dicta a!
+            Sequi quisquam aperiam tempore eaque quaerat? Voluptates commodi illo impedit eos facere inventore harum
+            exercitationem.
+            Consectetur doloremque nobis quidem. Asperiores animi rem, eius numquam necessitatibus magni sit ullam
+            magnam, corrupti iusto ducimus quod quisquam placeat cupiditate autem. Placeat, a! Accusamus eligendi maxime
+            porro consequuntur eum.
+            Eos inventore, blanditiis soluta in sed rerum delectus consequatur molestias cupiditate at deserunt
+            similique et vero magni omnis saepe ducimus, maiores voluptatibus. Nemo suscipit eius laudantium accusamus
+            tempora et tenetur.
+            Iusto, reiciendis. Molestias, assumenda. A dolor dolorum, fuga iste rem repellendus hic odio non sit vitae,
+            cumque voluptates dolorem nobis quia aliquam quisquam enim ea debitis at minima possimus voluptatibus?</p>
+        <div class="box footer">Footer</div>
+    </div>
+</body>
+
+</html>
