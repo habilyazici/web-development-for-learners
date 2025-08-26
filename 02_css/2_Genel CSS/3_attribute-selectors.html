@@ -1,64 +1,157 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Attribute Selectors Sıralı Demo</title>
     <style>
-        /* Attribute selector */
-        /* a[target] {
+        body {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 4rem;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        div {
+            width: 200px;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+
+        p {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        span {
+            margin: 25px 0;
+            display: block;
+        }
+
+        a {
+            margin-right: 0;
+            padding: 4px 8px;
+        }
+
+        .class1 a[target] {
             background-color: red;
+            color: white;
         }
 
-        [class] {
-            background-color: blue;
-        } */
-
-        /* Attribute value selector */
-
-        /* a[class="active"] {
-            background-color: blue;
-        }  */
-        
-        /* Attribute '*' selector  */
-        /* [class*="active"] {
-            background-color: blue;
-        } */
-
-        /* Attribute '~' selector  */
-        /* [class~="active"] {
-            background-color: blue;
-        } */
-
-
-        /* Attribute '|' selector */
-
-        /* [class|="active"] {
-            background-color: blue;
-        } */
-
-        /* Attribute '^' selector  */
-        /* [class^="active"] {
-            background-color: blue;
-        } */
-
-        /* Attribute '$' selector */
-        [class$="active"] {
-            background-color: blue;
+        .class2 [class] {
+            background-color: #e0e0ff;
         }
 
+        .class3 a[class="active"] {
+            background-color: green;
+            color: white;
+        }
+
+        .class4 [class*="active"] {
+            background-color: orange;
+        }
+
+        .class5 [class~="active"] {
+            background-color: yellow;
+        }
+
+        .class6 [class|="active"] {
+            background-color: pink;
+        }
+
+        .class7 [class^="active"] {
+            background-color: cyan;
+        }
+
+        .class8 [class$="active"] {
+            background-color: blue;
+            color: white;
+        }
     </style>
 </head>
+
 <body>
+    <div class="class1">
+        <p>1. a[target]</p>
+        <span>Span örneği</span>
+        <nav>
+            <a href="#" target="_blank">target'ı var</a>
+            <a href="#">no target</a>
+        </nav>
+    </div>
 
-    <span class="text active">text</span>
+    <div class="class2">
+        <p>2. [class]</p>
+        <span class="foo">class'ı var</span>
+        <nav>
+            <a href="#" class="foo">class'ı var</a>
+            <a href="#">no class</a>
+        </nav>
+    </div>
 
-    <nav>
-        <a href="" target="_blank">home</a>
-        <a href="" class="active">about</a>
-        <a href="" class="link">contact</a>
-    </nav>
+    <div class="class3">
+        <p>3. a[class="active"]</p>
+        <span class="active">active</span>
+        <nav>
+            <a href="#" class="active">active</a>
+            <a href="#" class="active-link">active-link</a>
+        </nav>
+    </div>
+
+    <div class="class4">
+        <p>4. [class*="active"]</p>
+        <span class="superactive">superactive</span>
+        <nav>
+            <a href="#" class="active">active</a>
+            <a href="#" class="superactive">superactive</a>
+            <a href="#" class="inactive">inactive</a>
+        </nav>
+    </div>
+
+    <div class="class5">
+        <p>5. [class~="active"]</p>
+        <span class="foo active bar">foo active bar</span>
+        <nav>
+            <a href="#" class="active">active</a>
+            <a href="#" class="foo active bar">foo active bar</a>
+            <a href="#" class="active-link">active-link</a>
+        </nav>
+    </div>
+
+    <div class="class6">
+        <p>6. [class|="active"]</p>
+        <span class="active-bar">active-bar</span>
+        <nav>
+            <a href="#" class="active">active</a>
+            <a href="#" class="activebar">activebar</a>
+            <a href="#" class="foo-active">foo-active</a>
+        </nav>
+    </div>
+
+    <div class="class7">
+        <p>7. [class^="active"]</p>
+        <span class="activebar">activebar</span>
+        <nav>
+            <a href="#" class="active">active</a>
+            <a href="#" class="activebar">activebar</a>
+            <a href="#" class="fooactive">fooactive</a>
+        </nav>
+    </div>
+
+    <div class="class8">
+        <p>8. [class$="active"]</p>
+        <span class="superactive">superactive</span>
+        <nav>
+            <a href="#" class="active">active</a>
+            <a href="#" class="superactive">superactive</a>
+            <a href="#" class="fooactive">fooactive</a>
+        </nav>
+    </div>
 
 </body>
+
 </html>

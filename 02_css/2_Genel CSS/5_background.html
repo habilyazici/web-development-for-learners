@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* html, body {
+            height: 100%;
+        } */
+
+        body {
+            margin: 0;
+        }
+
+        #header {
+            position: relative;
+            background: url("./images/bg.jpeg") no-repeat center center fixed;
+            /* background: image, repeat, position, attachment, color şeklinde fazla özellik almak için kullanılmaktadır. */
+            background-image: url("./images/bg.jpeg");
+            height: 100vh;
+            /* width: 80vw; */
+            background-attachment: fixed;
+            /* arka plan resmi sayfa kaydırıldığında sabit kalır */
+        }
+
+        #header::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: red;
+            z-index: 5;
+            opacity: 0.2;
+        }
+
+        .container * {
+            z-index: 10;
+        }
+
+        #header h1 {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 80px;
+            color: red;
+        }
+
+        .uzunluk {
+            height: 500px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <h1>Background Text</h1>
+        </div>
+    </div>
+    <div class="uzunluk">
+        <p>Genel Uzunluk</p>
+    </div>
+</body>
+
+</html>

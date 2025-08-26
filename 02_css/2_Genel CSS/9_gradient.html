@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* gradient maker css */
+        body {
+            margin: 0;
+        }
+
+        #header {
+            position: relative;
+            height: 100vh;
+            /* linear gradient( YÖN, RENK VE BAŞLANGICI, RENK VE BAŞLANGICI) ...*/
+            /* background: linear-gradient(90deg, rgba(34, 69, 195, 1) 0%, rgba(253, 243, 45, 1) 100%); */
+            /* background: linear-gradient(90deg,rgba(34, 69, 195, 1) 0%, rgba(253, 243, 45, 0.47) 100%); */
+            /* background: linear-gradient(90deg,rgba(34, 69, 195, 1) 50%, rgba(253, 243, 45, 1) 100%); */
+            /* background: linear-gradient(90deg,rgba(34, 69, 195, 1) 0%, rgba(253, 243, 45, 1) 50%); */
+
+            background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+            /* background: radial-gradient(circle,rgba(255, 255, 255, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(0, 0, 0, 1) 100%); */
+        }
+
+        #header h1 {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 80px;
+            color: white;
+        }
+
+        .logo {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <h1>Background Text</h1>
+            <img class="logo" src="./images/logo.png" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
