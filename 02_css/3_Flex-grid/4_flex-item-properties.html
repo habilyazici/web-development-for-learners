@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,8 @@
     <title>Document</title>
     <style>
         .container {
-            display: flex;    
-         
-         
+            display: flex;
+            flex-direction: row;
             height: 500px;
             background-color: #034f84;
         }
@@ -20,8 +20,22 @@
             margin: 20px;
             color: #fff;
             font-size: 25px;
+            flex-grow: 0;
+            /* 0 boş alanı kaplamaz(varsayılan) 1 boş alanı eşit şekilde kaplar */
+            flex-shrink: 1;
+            /* 0 daralan alanda elemanlar küçülmez 1 elemanlar eşit küçülür*/
+            flex-basis: 200px;
+            /* %, rem, em, px kullanılabilir. Başlangıç genişliği ayarlanır, otomatik olarak içerik genişliğidir*/
 
-            /* flex: 0 1 200px; */
+            /* flex: 1 1 200px;     */
+            /* flex: 1; */
+            /* grow:1, shrink:1, basis:0% (otomatik) */
+            /* flex: auto;  */
+            /* grow:1, shrink:1, basis:auto */
+            /* flex: none; */
+            /* grow:0, shrink:0, basis:auto */
+            /* flex: initial;       */
+            /* grow:0, shrink:1, basis:auto başlangıç değerdir bu */
         }
 
         .item-1 {
@@ -36,18 +50,15 @@
             order: -1;
             flex: 50%;
         }
-
-      
     </style>
 </head>
+
 <body>
-    
     <div class="container">
         <div class="item item-1">item 1</div>
         <div class="item item-2">item 2</div>
         <div class="item item-3">item 3</div>
     </div>
-
-
 </body>
+
 </html>

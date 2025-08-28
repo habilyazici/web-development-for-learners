@@ -7,12 +7,12 @@
     <title>Document</title>
     <style>
         .container {
+            background-color: #034f84;
+            height: 500px;
             display: flex;    
             flex-wrap: wrap;
             gap: 20px;
-            /* row-gap: 20px; */
-            /* column-gap: 20px; */
-         
+            /* align items kaç satır varsa o kadar satıra böler ve hizalarken content ise tek satırda hizalar */
             /* align-items: center; */
             align-content: center;
             /* align-content: flex-start; */
@@ -20,26 +20,17 @@
             /* align-content: space-around; */
             /* align-content: space-between; */
             /* align-content: space-evenly; */
-
-            height: 500px;
-            background-color: #034f84;
         }
 
         .item {
             background-color: #f7786b;
             padding: 30px;
-            /* margin: 20px; */
             color: #fff;
             font-size: 25px;
         }
-
-      
-
-      
     </style>
 </head>
 <body>
-    
     <div class="container">
         <div class="item">item 1</div>
         <div class="item">item 2</div>
@@ -50,7 +41,5 @@
         <div class="item">item 7</div>
         <div class="item">item 8</div>
     </div>
-
-
 </body>
 </html>

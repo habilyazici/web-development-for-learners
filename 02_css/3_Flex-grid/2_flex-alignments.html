@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,13 @@
     <title>Document</title>
     <style>
         .container {
-            display: flex;        
-            flex-direction: column;
+            display: flex;
+            gap: 20px;
+            /* row-gap: 20px;   */
+            /* column-gap: 20px; */
 
+            flex-direction: row;
+            /* direction değişince justify-content ve align-items yer değişir */
             /* justify-content: center; */
             /* justify-content: flex-start; */
             /* justify-content: flex-end; */
@@ -18,37 +23,35 @@
             /* justify-content: space-between; */
             /* justify-content: space-evenly; */
 
-            /* align-items: stretch; */
+            /* justify-content: stretch; */
+            align-items: stretch;
+            /* otomatik olarak sibling'lerin tam yüksekliğini almasını sağlar ama herhangi bir attribute bunun tam tersidir */
+            /* align-items: baseline; */
             /* align-items: flex-start; */
+            /* align-items: center; */
             /* align-items: flex-end; */
-            /* align-items: flex-end; */
-
-            align-items: center;
-            justify-content: space-between;
 
             height: 500px;
             background-color: #034f84;
-            /* padding: 15px; */
+            padding: 15px;
         }
 
         .item {
             background-color: #f7786b;
             padding: 30px;
-            /* margin: 20px; */
             color: #fff;
             font-size: 25px;
         }
     </style>
 </head>
+
 <body>
-    
     <div class="container">
         <div class="item">item 1</div>
         <div class="item">item 2</div>
         <div class="item">item 3</div>
         <div class="item">item 4</div>
     </div>
-
-
 </body>
+
 </html>

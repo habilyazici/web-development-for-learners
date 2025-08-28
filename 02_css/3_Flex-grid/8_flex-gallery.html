@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,30 @@
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
     <style>
         h1 {
             font-family: 'Open Sans', sans-serif;
             font-size: 3rem;
             text-align: center;
         }
+
         .gallery {
             display: flex;
             flex-wrap: wrap;
+            gap: 3px;
         }
 
         .gallery div {
             flex-grow: 1;
-            margin: 3px;
             overflow: hidden;
+            /*
+            overflow: visible;   // Varsayılan. Taşan içerik dışarı taşar ve görünür.
+            overflow: hidden;    // Taşan içerik gizlenir, görünmez olur.
+            overflow: scroll;    // Taşan içerik için her zaman kaydırma çubuğu ekler.
+            overflow: auto;      // Gerekirse kaydırma çubuğu ekler.
+            */
         }
 
         img {
@@ -36,11 +45,9 @@
         }
     </style>
 </head>
+
 <body>
-    
-
     <h1>Image Gallery</h1>
-
     <div class="gallery">
         <div>
             <img src="https://picsum.photos/300/200?random=1">
@@ -64,7 +71,6 @@
             <img src="https://picsum.photos/300/300?random=7">
         </div>
     </div>
-
-
 </body>
+
 </html>
