@@ -10,6 +10,7 @@
         .container {
             display: flex;
             flex-direction: row;
+            align-items: center;
             height: 500px;
             background-color: #034f84;
         }
@@ -20,36 +21,43 @@
             margin: 20px;
             color: #fff;
             font-size: 25px;
-            flex-grow: 0;
-            /* 0 boş alanı kaplamaz(varsayılan) 1 boş alanı eşit şekilde kaplar */
-            flex-shrink: 1;
-            /* 0 daralan alanda elemanlar küçülmez 1 elemanlar eşit küçülür*/
-            flex-basis: 200px;
-            /* %, rem, em, px kullanılabilir. Başlangıç genişliği ayarlanır, otomatik olarak içerik genişliğidir*/
+            /* flex-grow: 0; */
+            /* 0 (varsayılan) boş alanı kaplamaz, 1 boş alanı eşit şekilde kaplar 2,3 şeklinde de değer verilebilir*/
 
-            /* flex: 1 1 200px;     */
+            /* flex-shrink: 1; */
+            /* 0 daralan alanda elemanlar küçülmez, 1 (varsayılan) elemanlar eşit küçülür*/
+
+            /* flex-basis: 200px; */
+            /* %, rem, em - Başlangıç genişliği ayarlanır genişlik vermek için kullan. grow-shrink'i bozabilir, standart olarak ise içerik genişliğidir*/
+
+            /* flex: initial; */
+            /* standart flex değerleridir */
             /* flex: 1; */
             /* grow:1, shrink:1, basis:0% (otomatik) */
             /* flex: auto;  */
             /* grow:1, shrink:1, basis:auto */
+            /* flex: 2; */
+            /* grow:2, shrink:1, basis:0% (otomatik) */
             /* flex: none; */
             /* grow:0, shrink:0, basis:auto */
-            /* flex: initial;       */
-            /* grow:0, shrink:1, basis:auto başlangıç değerdir bu */
         }
-
+/* 
         .item-1 {
             flex: 25%;
+            flex: 1
         }
 
         .item-2 {
             flex: 25%;
+            flex: 1
         }
 
         .item-3 {
-            order: -1;
             flex: 50%;
-        }
+            flex: 2
+        } */
+
+        /* flexe yüzde vermekle oran vermek uygulamada aynıdır ama sen oran kullan*/
     </style>
 </head>
 
