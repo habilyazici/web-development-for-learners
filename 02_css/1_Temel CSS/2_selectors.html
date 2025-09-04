@@ -2,7 +2,7 @@
 <html lang="tr">
 
 <head>
-    <!-- health color palette -->
+    <!-- color palette -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +17,8 @@
             border: 2px solid red;
         }
 
-        /* sectionun hemen içerisindeki h1'i seçer alt elemanları seçmez */
-        section>h1 {
+        /* sectionun hemen içerisindeki ilk elamanı seçer alt elemanları seçmez */
+        section>*:first-child {
             letter-spacing: 2px;
         }
 
@@ -38,6 +38,7 @@
         }
 
         /* id veya başka bir attribute'si page ile başlayan tüm elemanları seçer */
+        /* kelimenin içinde geçmesi yeterlidir. */
         [id^="page"] {
             padding: 8px;
         }
@@ -59,7 +60,6 @@
 </head>
 
 <body>
-
     <main>
         <section>
             <h1 id="page-title" class="text-white f20">Welcome To MovieApp</h1>
@@ -68,7 +68,6 @@
             <h2 id="page-subtitle" class="text-white f18">How it works?</h2>
         </section>
     </main>
-
 </body>
 
 </html>

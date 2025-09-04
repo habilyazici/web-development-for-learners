@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="register.php" method="post" autocomplete="on">
+    <!-- formda submit'e basıldığında veriler register.php'ye gider -->
+    <!-- autocomplate="email", username, tel vs ile hangilerine açık olacağı belirleneir -->
+    <div>
+      <label for="name">Adınız: </label>
+      <input type="text" id="name" name="name" required autocomplete="given-name" />
+    </div>
+
+    <div>
+      <label for="surname">Soyad: </label>
+      <input type="text" id="surname" name="surname" required autocomplete="family-name" />
+    </div>
+
+    <div>
+      <label for="eposta">Email</label>
+      <input type="email" id="eposta" name="eposta" autocomplete="email" />
+    </div>
+
+    <br />
+    <div>
+      <label for="parola">Parola: </label>
+      <input type="password" id="parola" name="parola" required />
+    </div>
+
+    <div>
+      <label for="intro">Kendini Anlat: </label>
+      <textarea id="intro" name="intro" cols="30"></textarea>
+    </div>
+    <div>
+      <p>En sevdiğin programlama dili:</p>
+      <input type="radio" id="html" name="programlama" value="HTML" required />
+      <label for="html">HTML</label>
+      <input type="radio" id="css" name="programlama" value="CSS" />
+      <label for="css">CSS</label>
+      <input type="radio" id="javascript" name="programlama" value="Javascript" />
+      <label for="javascript">Javascript</label>
+    </div>
+
+    <div>
+      <p>Diğer sevdiğin programlama dilleri:</p>
+      <input type="checkbox" id="html2" name="diller[]" value="HTML" />
+      <label for="html2">HTML</label>
+      <input type="checkbox" id="css2" name="diller[]" value="CSS" />
+      <label for="css2">CSS</label>
+      <input type="checkbox" id="javascript2" name="diller[]" value="Javascript" />
+      <label for="javascript2">Javascript</label>
+      <br />
+    </div>
+    <br />
+
+    <div>
+      <label for="cities">Şehir</label>
+      <select id="cities" name="cities">
+        <option value="">Seçiniz</option>
+        <option value="41">Kocaeli</option>
+        <option value="34">İstanbul</option>
+      </select>
+    </div>
+    <br />
+
+    <div>
+      <label for="birthday">Birthday:</label>
+      <input type="date" id="birthday" name="birthday" />
+    </div>
+
+    <div>
+      <label for="file">Dosya Yükle:</label>
+      <input type="file" id="file" name="file" />
+    </div>
+
+    <div>
+      <label for="website">Web Sitesi:</label>
+      <input type="url" id="website" name="website" placeholder="https://ornek.com" />
+    </div>
+
+    <div>
+      <label for="phone">Telefon:</label>
+      <input type="tel" id="phone" name="phone" placeholder="+90 555 555 55 55" />
+    </div>
+
+    <div>
+      <label for="age">Yaş:</label>
+      <input type="number" id="age" name="age" min="0" max="120" />
+    </div>
+
+    <div>
+      <label for="color">Favori Renk:</label>
+      <input type="color" id="color" name="color" value="#ff0000" />
+    </div>
+
+    <div>
+      <label for="range">Memnuniyet (1-10):</label>
+      <input type="range" id="range" name="range" min="1" max="10" value="0" />
+    </div>
+
+    <div>
+      <label for="time">Saat Seç:</label>
+      <input type="time" id="time" name="time" />
+    </div>
+
+    <div>
+      <label for="month">Ay Seç:</label>
+      <input type="month" id="month" name="month" />
+    </div>
+
+    <div>
+      <label for="search">Arama:</label>
+      <input type="search" id="search" name="search" placeholder="Ara..." />
+    </div>
+
+    <input type="hidden" name="form_id" value="kayit_formu" />
+
+    <button type="submit">Kaydet</button>
+    <button type="reset">Temizle</button>
+  </form>
+</body>
+
+</html>

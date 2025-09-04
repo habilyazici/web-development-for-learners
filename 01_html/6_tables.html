@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- cellpadding hücrenin padingi işte -->
+  <table border="1" width="70%" cellpadding="10" cellspacing="1" aria-describedby="urunTabloAciklama">
+    <caption id="urunTabloAciklama" style="display: none;">
+      Ürün Tablosu: Satıştaki ürünlerin fiyat ve görselleri listelenmiştir.
+    </caption>
+    <thead>
+      <tr scope="row">
+        <!-- table header -->
+        <th scope="col">Id</th>
+        <th scope="col">Ürün ismi</th>
+        <th scope="col">Fiyat</th>
+        <th scope="col">Resim</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <!-- table data -->
+        <td>1</td>
+        <td>iphone 11</td>
+        <td>7000TL</td>
+        <td>
+          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=50&q=80"
+            alt="iphone 11" width="50" />
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td rowspan="2">iphone 12</td>
+        <td>8000TL</td>
+        <td>
+          <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=50&q=80"
+            alt="iphone 12" width="50" />
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td colspan="2" style="text-align: center; background: #eee">
+          8000TL -
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=50&q=80"
+            alt="iphone 12" width="50" />
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4" style="text-align: center; background: #eee">
+          Tablo Sonu
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th scope="row" colspan="2">Toplam Ürün</th>
+        <td colspan="2">3</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+
+</html>
