@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Floating ve Görsel Düzeni</title>
     <style>
-        #container {
+        .container {
             background-color: chocolate;
             padding: 10px;
         }
@@ -22,7 +22,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2em;
+            font-size: 1.2rem;
         }
 
         #box1 {
@@ -51,15 +51,13 @@
 
 <body>
     <h1>Floating Kutular ve Görsel Düzeni</h1>
-    <div id="container" class="clearfix">
+    <div class="container clearfix">
         <div class="box" id="box1">Kutu 1</div>
         <div class="box">Kutu 2</div>
         <div class="box">Kutu 3</div>
         <!-- <div style="clear: both;"></div> -->
-
     </div>
     <hr>
-
     <div class="example2 clearfix">
         <h2>Float ile Görsel ve Metin Düzeni</h2>
         <img src="/02_css/1_Temel CSS/images/rowing.jpeg" class="float-img" alt="örnek görsel">

@@ -17,7 +17,7 @@
         }
 
         .box {
-            padding: 10px;
+            padding: 20px;
             border: 5px solid #6d5b95;
             margin-bottom: 10px;
             position: relative;
@@ -38,20 +38,20 @@
         }
 
         .absolute-box {
-            /* relative içerik akışta kalır absoluteta ise içerik akıştan çıkar. */
+            /* parent elementlerinin birinde position belirlenmeli yoksa body'ye göre hizalanır. */
+            /* relativede içerik akışta kalır absoluteta ise içerik akıştan çıkar. */
             position: absolute;
             top: 20px;
-            left: 50%;
+            left: 20%;
             transform: translateX(-50% -50%);
             width: 120px;
             height: 50px;
             background: #fff;
             color: #d64161;
             text-align: center;
-            line-height: 50px;
+            line-height: 2.3;
             z-index: 1;
             border: 5px solid black;
-            /* parent elementlerinin birinde position belirlenmeli yoksa body'ye göre hizalanır. */
         }
 
         .footer {

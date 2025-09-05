@@ -18,7 +18,7 @@
             margin: 80px;
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 80px;
         }
 
         .box {
@@ -30,25 +30,28 @@
             align-items: center;
             justify-content: center;
             font-size: 1.1rem;
-            box-shadow: none;
             transition: box-shadow 0.3s;
         }
 
         .shadow-simple {
             box-shadow: 4px 4px 8px #aaa;
-            /* x-offset, y-offset, blur-radius(gölge yayılması), color*/
+            /* x-offset, y-offset, blur-radius(gölge bluru), color*/
         }
 
         .shadow-inset {
             box-shadow: inset 0 0 16px #2E4C6D;
-            /* box-shadow: inset x-offset y-offset blur-radius color; */
+            /* inset x-offset y-offset blur-radius color; */
         }
 
+        .shadow-large {
+            box-shadow: 8px 8px 32px 0px #888;
+            /* x-offset, y-offset, blur-radius, spread-radius(gölge yayılmasının boyutu), color */
+        }
+        
         .shadow-multi {
             box-shadow:
                 4px 8px 16px 0px #FC997C,
-                0 0 0 20px #2E4C6D;
-            /* sınırsız sayıda yazılabilir ayrıca son parametre gölge yayılmasıdır */
+                -4px -8px 16px 0px #888;
         }
 
         .shadow-horizontal {
@@ -75,6 +78,7 @@
     <div class="container">
         <div class="box shadow-simple">shadow-simple</div>
         <div class="box shadow-inset">shadow-inset</div>
+        <div class="box shadow-large">shadow-large</div>
         <div class="box shadow-multi">shadow-multi</div>
         <div class="box shadow-horizontal">shadow-horizontal</div>
         <div class="box shadow-vertical">shadow-vertical</div>
