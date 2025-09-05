@@ -20,7 +20,7 @@
             padding: 30px;
             margin: 20px;
             color: #fff;
-            font-size: 25px;
+            font-size: 1.5rem;
             /* flex-grow: 0; */
             /* 0 (varsayılan) boş alanı kaplamaz, 1 boş alanı eşit şekilde kaplar 2,3 şeklinde de değer verilebilir*/
 
@@ -28,7 +28,7 @@
             /* 0 daralan alanda elemanlar küçülmez, 1 (varsayılan) elemanlar eşit küçülür*/
 
             /* flex-basis: 200px; */
-            /* %, rem, em - Başlangıç genişliği ayarlanır genişlik vermek için kullan. grow-shrink'i bozabilir, standart olarak ise içerik genişliğidir*/
+            /* %, vw, rem, em - Başlangıç genişliği ayarlanır genişlik vermek için kullan. grow-shrink'i bozabilir, standart olarak ise içerik genişliğidir*/
 
             /* flex: initial; */
             /* standart flex değerleridir */
@@ -41,10 +41,12 @@
             /* flex: none; */
             /* grow:0, shrink:0, basis:auto */
         }
-/* 
+
         .item-1 {
             flex: 25%;
-            flex: 1
+            flex: 1;
+            min-width: 150px;
+            max-width: 300px;
         }
 
         .item-2 {
@@ -55,7 +57,7 @@
         .item-3 {
             flex: 50%;
             flex: 2
-        } */
+        }
 
         /* flexe yüzde vermekle oran vermek uygulamada aynıdır ama sen oran kullan*/
     </style>
