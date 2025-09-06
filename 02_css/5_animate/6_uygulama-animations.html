@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,17 +14,26 @@
             padding: 0;
             color: #fff;
         }
-        #page-1 {background-color: #313552;}
-        #page-2 {background-color: #B8405E;}
-        #page-3 {background-color: #2EB086;}
+
+        #page-1 {
+            background-color: #313552;
+        }
+
+        #page-2 {
+            background-color: #B8405E;
+        }
+
+        #page-3 {
+            background-color: #2EB086;
+        }
 
         .page {
             display: flex;
             flex-direction: column;
-            height: 100vh;
             align-items: center;
             justify-content: center;
             text-align: center;
+            height: 100vh;
         }
 
         .page h1 {
@@ -75,17 +85,22 @@
     </style>
     <title>Document</title>
 </head>
+
 <body>
     <section id="page-1" class="page">
         <h1>Page 1</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem reiciendis rerum quos officiis corrupti repellat, nisi perferendis hic molestias. Suscipit consequatur rerum ipsam magnam harum ex. Ab deserunt quae assumenda.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem reiciendis rerum quos officiis corrupti
+            repellat, nisi perferendis hic molestias. Suscipit consequatur rerum ipsam magnam harum ex. Ab deserunt quae
+            assumenda.</p>
         <div>
             <a href="#page-2" class="btn">Next Page</a>
         </div>
     </section>
     <section id="page-2" class="page">
         <h1>Page 2</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem reiciendis rerum quos officiis corrupti repellat, nisi perferendis hic molestias. Suscipit consequatur rerum ipsam magnam harum ex. Ab deserunt quae assumenda.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem reiciendis rerum quos officiis corrupti
+            repellat, nisi perferendis hic molestias. Suscipit consequatur rerum ipsam magnam harum ex. Ab deserunt quae
+            assumenda.</p>
         <div>
             <a href="#page-1" class="btn">Previous Page</a>
             <a href="#page-3" class="btn">Next Page</a>
@@ -93,7 +108,9 @@
     </section>
     <section id="page-3" class="page">
         <h1>Page 3</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem reiciendis rerum quos officiis corrupti repellat, nisi perferendis hic molestias. Suscipit consequatur rerum ipsam magnam harum ex. Ab deserunt quae assumenda.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem reiciendis rerum quos officiis corrupti
+            repellat, nisi perferendis hic molestias. Suscipit consequatur rerum ipsam magnam harum ex. Ab deserunt quae
+            assumenda.</p>
         <div>
             <a href="#page-2" class="btn">Previous Page</a>
         </div>
@@ -101,30 +118,31 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-    // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
 
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-        // Prevent default anchor click behavior
-        event.preventDefault();
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
 
-        // Store hash
-        var hash = this.hash;
+                    // Store hash
+                    var hash = this.hash;
 
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-        $('html, body').animate({
-            scrollTop: $(hash).offset().top
-        }, 800, function(){
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
 
-            // Add hash (#) to URL when done scrolling (default click behavior)
-            window.location.hash = hash;
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
         });
-        } // End if
-    });
-    });
     </script>
 </body>
+
 </html>
